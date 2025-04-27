@@ -9,14 +9,15 @@ dotenv.config();
 const app = express();
 
 
-const corsOptions = {
-  origin: ['https://task-manager-frontend-kappa-three.vercel.app','https://task-manager-frontend-mediconnects-projects.vercel.app',],
-  methods: 'GET,POST,PUT,DELETE', 
-  allowedHeaders: 'Content-Type,Authorization', 
-};
 
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: [
+    'https://task-manager-frontend-kappa-three.vercel.app',
+   'https://task-manager-frontend-mediconnects-projects.vercel.app'
+  ],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
