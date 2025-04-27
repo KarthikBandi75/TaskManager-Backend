@@ -10,7 +10,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: ['https://task-manager-frontend-kappa-three.vercel.app','https://task-manager-frontend-mediconnects-projects.vercel.app',] 
+  origin: ['https://task-manager-frontend-kappa-three.vercel.app','https://task-manager-frontend-mediconnects-projects.vercel.app',],
   methods: 'GET,POST,PUT,DELETE', 
   allowedHeaders: 'Content-Type,Authorization', 
 };
